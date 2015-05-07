@@ -18,7 +18,11 @@ public class SupplierExampleTest extends AbstractExampleTest {
     @Test
     public void testSupplier() {
         final Supplier<Car> carSupplier = () -> createCar("Tata", 23, false);
-        final List<Car> cars = new ArrayList<>();
-        fail("todo");
+        driverCar(carSupplier);
+        driverCar(Car::new);
+    }
+
+    private void driverCar(final Supplier<Car> car){
+        car.get();
     }
 }
