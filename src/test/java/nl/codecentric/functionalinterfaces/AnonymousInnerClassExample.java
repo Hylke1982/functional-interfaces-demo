@@ -30,4 +30,8 @@ public class AnonymousInnerClassExample {
         x.doOperation("bla");
     }
 
+    private void doSomething(String bla)
+    {
+
+    }
 }
